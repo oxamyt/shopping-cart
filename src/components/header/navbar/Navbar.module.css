@@ -1,0 +1,42 @@
+.shoppingSection {
+  display: flex;
+  gap: 30px;
+  font-size: 1.5rem;
+}
+
+.cartSvg {
+  width: 3rem;
+}
+
+.shopSvg {
+  width: 2rem;
+  vertical-align: middle;
+}
+
+.heading {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  color: #020617;
+  position: relative;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #020617;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.2s ease-in-out;
+}
+
+.heading:hover::after {
+  width: 100%;
+}

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
-import Header from "../components/homepage/header/Header";
+import Header from "../components/header/Header";
 
 describe("Header component", () => {
   it("renders header", () => {

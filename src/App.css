@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Arimo";
+  src: url(./assets/fonts/Arimo-Regular.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  font-family: "Arimo", sans-serif;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+}

@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #334155;
+  animation: 0.8s slide;
+  position: sticky;
+  top: 0;
+  opacity: 1;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.name {
+  margin: 0;
+  font-size: 4rem;
+}

@@ -1,0 +1,24 @@
+.shop {
+  position: relative;
+  height: 100vh;
+}
+
+.loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 5rem;
+  animation: 1s ease-in-out 0s infinite rotating;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
