@@ -7,10 +7,11 @@ function Navbar() {
       <Link to={"/"} className={styles.heading}>
         Home
       </Link>
-      <Link to={"/shop"} className={styles.heading}>
+      <Link to={"shop-page"} className={styles.heading}>
         Shop
       </Link>
       <img src={cartSvg} className={styles.cartSvg} alt="cart-svg"></img>
+      <p className={styles.number}></p>
     </nav>
   );
 }

@@ -1,10 +1,14 @@
 import "./App.css";
-import Homepage from "./components/homepage/Homepage";
+import Header from "./components/header/Header";
+import { Outlet } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const [cart, setCart] = useState(0);
   return (
     <div className={"container"}>
-      <Homepage />
+      <Header />
+      <Outlet context={[cart, setCart]} />
     </div>
   );
 }

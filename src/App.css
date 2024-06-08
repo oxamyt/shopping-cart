@@ -15,3 +15,8 @@ body {
 .container {
   height: 100%;
 }
+
+::selection {
+  color: #f8fafc;
+  background-color: #020617;
+}
