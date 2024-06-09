@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import styles from "./ShopPage.module.css";
-import { useOutletContext } from "react-router-dom";
 import loadingSvg from "../../assets/loading.svg";
 import { getClothesRequest } from "./fetchCall/fetchCall";
+import ShopItem from "../shopItems/ShopItem";
+import { useOutletContext } from "react-router-dom";
 
 function ShopPage() {
   const [data, setData] = useState(null);
@@ -38,19 +39,7 @@ function ShopPage() {
       {data &&
         data.map((item) => {
           return (
-            <div key={item} className={styles.item}>
-              <img
-                className={styles.image}
-                src={item.image}
-                alt="item-image"
-              ></img>
-              <h1 className={styles.title}>{item.title}</h1>
-              <h2 className={styles.price}>$ {item.price}</h2>
-              <button type="button" className={styles.btn}>
-                Add To Cart
-              </button>
-              <p>{cart}</p>
-            </div>
+            <ShopItem key={item.id} item={item} cart={cart} setCart={setCart} />
           );
         })}
     </main>

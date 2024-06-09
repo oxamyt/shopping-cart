@@ -1,12 +1,12 @@
 import styles from "./Header.module.css";
 import Navbar from "./navbar/Navbar";
 
-function Header() {
+function Header({ cart }) {
   return (
     <>
       <header className={styles.header}>
         <h1 className={styles.name}>ThreadFunk.</h1>
-        <Navbar />
+        <Navbar cart={cart} />
       </header>
     </>
   );

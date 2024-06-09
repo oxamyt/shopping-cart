@@ -4,10 +4,10 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
-  const [cart, setCart] = useState(0);
+  const [cart, setCart] = useState([]);
   return (
     <div className={"container"}>
-      <Header />
+      <Header cart={cart} />
       <Outlet context={[cart, setCart]} />
     </div>
   );

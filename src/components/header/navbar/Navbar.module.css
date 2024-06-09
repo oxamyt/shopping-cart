@@ -2,6 +2,7 @@
   display: flex;
   gap: 30px;
   font-size: 1.5rem;
+  align-items: center;
 }
 
 .cartSvg {
@@ -39,4 +40,12 @@
 
 .heading:hover::after {
   width: 100%;
+}
+
+.number {
+  text-align: center;
+}
+
+.cart {
+  display: flex;
 }
