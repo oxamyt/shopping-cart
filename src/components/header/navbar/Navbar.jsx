@@ -1,6 +1,8 @@
 import styles from "./Navbar.module.css";
 import cartSvg from "../../../assets/cart.svg";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
 function Navbar({ cart }) {
   const price = Math.round(cart.reduce((total, item) => total + item.price, 0));
   return (
@@ -12,12 +14,18 @@ function Navbar({ cart }) {
         Shop
       </Link>
       <div className={styles.cart}>
-        <img src={cartSvg} className={styles.cartSvg} alt="cart-svg"></img>
-        <p className={styles.number}>{cart.length}</p>
+        <Link to="cart-page" className={styles.cart}>
+          <img src={cartSvg} className={styles.cartSvg} alt="cart-svg"></img>
+          <p className={styles.number}>{cart.length}</p>
+        </Link>
       </div>
       <p className={styles.number}>$ {price}</p>
     </nav>
   );
 }
+
+Navbar.propTypes = {
+  cart: PropTypes.array.isRequired,
+};
 
 export default Navbar;

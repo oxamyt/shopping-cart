@@ -1,8 +1,9 @@
 import { useState } from "react";
 import styles from "./ShopItem.module.css";
-import { useOutletContext } from "react-router-dom";
+import PropTypes from "prop-types";
+import AddItemFeatures from "../addItemFeatures/AddItemFeatures";
 
-function ShopItem({ item, cart, setCart }) {
+function ShopItem({ item, cart, setCart, isShop }) {
   const [count, setCount] = useState(0);
 
   function handleCountChange(event) {
@@ -25,20 +26,24 @@ function ShopItem({ item, cart, setCart }) {
       <img className={styles.image} src={item.image} alt="item-image"></img>
       <h1 className={styles.title}>{item.title}</h1>
       <h2 className={styles.price}>$ {item.price}</h2>
-      <div className={styles.wrapper}>
-        <input
-          type="number"
-          value={count}
-          min="0"
-          className={styles.input}
-          onChange={handleCountChange}
-        ></input>
-        <button type="button" className={styles.btn} onClick={handleUpdateCart}>
-          Add To Cart
-        </button>
-      </div>
+      <AddItemFeatures
+        handleCountChange={handleCountChange}
+        handleUpdateCart={handleUpdateCart}
+        count={count}
+      />
     </div>
   );
 }
+
+ShopItem.propTypes = {
+  item: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+  }).isRequired,
+  cart: PropTypes.array.isRequired,
+  setCart: PropTypes.func.isRequired,
+  isShop: PropTypes.bool.isRequired,
+};
 
 export default ShopItem;

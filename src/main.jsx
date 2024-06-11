@@ -5,6 +5,7 @@ import ShopPage from "./components/shopPage/ShopPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./normalize.css";
 import ShopInfo from "./components/shopInfo/ShopInfo.jsx";
+import CartPage from "./components/cartPage/CartPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,12 +14,9 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <ShopInfo /> },
       { path: "shop-page", element: <ShopPage /> },
+      { path: "cart-page", element: <CartPage /> },
     ],
   },
-  // {
-  //   path: "shop",
-  //   element: <ShopPage />,
-  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

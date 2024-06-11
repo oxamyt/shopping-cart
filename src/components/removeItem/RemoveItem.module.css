@@ -1,0 +1,21 @@
+.btn {
+  background-color: #dc2626;
+  color: #f8fafc;
+  border: 0;
+  padding: 1rem;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  text-decoration: none;
+  width: fit-content;
+  transition: background-color 0.5s;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.btn:hover {
+  background-color: #dc2626;
+  color: #020617;
+  border: 2px solid #334155;
+  cursor: pointer;
+  border-radius: 20px;
+}

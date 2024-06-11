@@ -1,0 +1,38 @@
+.btn {
+  background-color: #020617;
+  color: #f8fafc;
+  border: 0;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  text-decoration: none;
+  width: fit-content;
+  transition: background-color 0.5s;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #f8fafc;
+  color: #020617;
+  border: 2px solid #334155;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.input {
+  width: 3rem;
+  padding: 0.2rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border: 0;
+  border: 1px solid #334155;
+  border-radius: 15px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 10px;
+}

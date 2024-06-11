@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 .cartSvg {
   width: 3rem;
 }
@@ -44,6 +48,9 @@
 
 .number {
   text-align: center;
+
+  color: #020617;
+  text-decoration: none;
 }
 
 .cart {

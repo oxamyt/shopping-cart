@@ -1,5 +1,6 @@
 import styles from "./Header.module.css";
 import Navbar from "./navbar/Navbar";
+import PropTypes from "prop-types";
 
 function Header({ cart }) {
   return (
@@ -11,5 +12,9 @@ function Header({ cart }) {
     </>
   );
 }
+
+Header.propTypes = {
+  cart: PropTypes.array.isRequired,
+};
 
 export default Header;
