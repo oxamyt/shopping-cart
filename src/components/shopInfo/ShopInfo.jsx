@@ -18,7 +18,7 @@ function ShopInfo() {
             <i className={styles.highlight}>ThredFunk.</i> : Threads so funky,
             they'll make you wanna dance!
           </p>
-          <Link className={styles.btn} to="shop-page">
+          <Link className={styles.btn} to="shop">
             Shop now{" "}
           </Link>
         </section>

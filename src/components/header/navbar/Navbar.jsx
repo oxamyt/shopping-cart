@@ -10,11 +10,11 @@ function Navbar({ cart }) {
       <Link to={"/"} className={styles.heading}>
         Home
       </Link>
-      <Link to={"shop-page"} className={styles.heading}>
+      <Link to={"shop"} className={styles.heading}>
         Shop
       </Link>
       <div className={styles.cart}>
-        <Link to="cart-page" className={styles.cart}>
+        <Link to="cart" className={styles.cart}>
           <img src={cartSvg} className={styles.cartSvg} alt="cart-svg"></img>
           <p className={styles.number}>{cart.length}</p>
         </Link>
