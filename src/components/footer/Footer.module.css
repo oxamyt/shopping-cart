@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #334155;
+  background-color: #020617;
+  color: #f8fafc;
+  gap: 20px;
+}
+
+.name {
+  font-size: 1.5rem;
+}
+
+.svg {
+  width: 2rem;
+}

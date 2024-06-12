@@ -4,9 +4,11 @@ import loadingSvg from "../../assets/loading.svg";
 import { getClothesRequest } from "./fetchCall/fetchCall";
 import ShopItem from "../shopItems/ShopItem";
 import { useOutletContext } from "react-router-dom";
+import ItemsNav from "../itemsNav/ItemsNav";
 
 function ShopPage() {
   const [data, setData] = useState(null);
+  const [originalData, setOriginalData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [cart, setCart] = useOutletContext();
@@ -18,6 +20,7 @@ function ShopPage() {
           "https://fakestoreapi.com/products"
         );
         setData(getData);
+        setOriginalData(getData);
         setError(null);
       } catch (err) {
         setError(err.message);
@@ -31,18 +34,26 @@ function ShopPage() {
   }, []);
 
   return (
-    <main className={styles.shop}>
-      {loading && (
-        <img src={loadingSvg} className={styles.loading} alt="loading"></img>
-      )}
-      {error && <p>Error: {error}</p>}
-      {data &&
-        data.map((item) => {
-          return (
-            <ShopItem key={item.id} item={item} cart={cart} setCart={setCart} />
-          );
-        })}
-    </main>
+    <>
+      <ItemsNav data={data} setData={setData} originalData={originalData} />
+      <main className={styles.shop}>
+        {loading && (
+          <img src={loadingSvg} className={styles.loading} alt="loading"></img>
+        )}
+        {error && <p>Error: {error}</p>}
+        {data &&
+          data.map((item) => {
+            return (
+              <ShopItem
+                key={item.id}
+                item={item}
+                cart={cart}
+                setCart={setCart}
+              />
+            );
+          })}
+      </main>
+    </>
   );
 }
 
