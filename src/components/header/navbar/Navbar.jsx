@@ -15,8 +15,8 @@ function Navbar({ cart }) {
       </Link>
       <div className={styles.cart}>
         <Link to="cart" className={styles.cart}>
-          <img src={cartSvg} className={styles.cartSvg} alt="cart-svg"></img>
           <p className={styles.number}>{cart.length}</p>
+          <img src={cartSvg} className={styles.cartSvg} alt="cart-svg"></img>
         </Link>
       </div>
       <p className={styles.number}>$ {price}</p>

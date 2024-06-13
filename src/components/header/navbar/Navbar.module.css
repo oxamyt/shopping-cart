@@ -56,6 +56,11 @@ a {
 
 .cart {
   display: flex;
+  transition: transform 0.2s;
+}
+
+.cart:hover {
+  transform: scale(1.05);
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
