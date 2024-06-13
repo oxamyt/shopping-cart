@@ -11,6 +11,8 @@
   font-size: 1.5rem;
   gap: 30px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 50%;
   box-shadow: 10px 10px 20px 0px rgba(150, 150, 150, 0.62);
   animation: 1s slide;
@@ -28,10 +30,12 @@
 
 .description {
   text-align: left;
+  font-size: clamp(1rem, -4.8571rem + 9.1429vw, 2rem);
 }
 
 .image {
   width: 20rem;
+  height: 25rem;
 }
 
 .highlight {
@@ -61,4 +65,49 @@
   color: #020617;
   border: 2px solid #334155;
   cursor: pointer;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .description {
+    font-size: clamp(1rem, 0.3969rem + 1.2549vw, 1.2rem);
+  }
+  .image {
+    width: 15rem;
+    height: 20rem;
+  }
+  .btn {
+    padding: 1rem 1.2rem 1rem 1.2rem;
+    font-size: clamp(0.8rem, 0.2648rem + 1.115vw, 1rem);
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .description {
+    font-size: clamp(0.4rem, -0.0028rem + 1.6725vw, 1.2rem);
+  }
+  .image {
+    width: 10rem;
+    height: 15rem;
+  }
+  .btn {
+    padding: 0.5rem;
+    font-size: clamp(0.8rem, 0.2648rem + 1.115vw, 1rem);
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .info {
+    max-width: 100%;
+  }
+  .description {
+    font-size: clamp(0.5rem, 0.2rem + 2vw, 0.7rem);
+  }
+  .image {
+    width: 5rem;
+    height: 10rem;
+  }
+  .btn {
+    padding: 0.5rem;
+    font-size: clamp(0.8rem, 0.2648rem + 1.115vw, 1rem);
+  }
 }

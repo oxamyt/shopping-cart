@@ -6,11 +6,14 @@
   background-color: #020617;
   color: #f8fafc;
   position: relative;
+  padding: 0 0.5rem 0 0.5rem;
 }
 
 .section {
   cursor: pointer;
   position: relative;
+  text-align: center;
+  font-size: clamp(1.5rem, -3.8571rem + 9.1429vw, 2.5rem);
 }
 
 .section::after {
@@ -27,4 +30,22 @@
 
 .section:hover::after {
   width: 100%;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .section {
+    font-size: clamp(1rem, -2.0157rem + 6.2745vw, 2rem);
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .section {
+    font-size: clamp(1rem, 0.162rem + 2.7875vw, 1.5rem);
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .section {
+    font-size: clamp(0.6rem, 0.6rem + 2vw, 0.8rem);
+  }
 }

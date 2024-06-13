@@ -3,7 +3,7 @@ import styles from "./ShopItem.module.css";
 import PropTypes from "prop-types";
 import AddItemFeatures from "../addItemFeatures/AddItemFeatures";
 
-function ShopItem({ item, cart, setCart, isShop }) {
+function ShopItem({ item, cart, setCart }) {
   const [count, setCount] = useState(0);
 
   function handleCountChange(event) {
@@ -43,7 +43,6 @@ ShopItem.propTypes = {
   }).isRequired,
   cart: PropTypes.array.isRequired,
   setCart: PropTypes.func.isRequired,
-  isShop: PropTypes.bool.isRequired,
 };
 
 export default ShopItem;

@@ -21,7 +21,7 @@ a {
 .heading {
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: clamp(1rem, -4.8571rem + 9.1429vw, 2rem);
   margin-block-start: 0.83em;
   margin-block-end: 0.83em;
   margin-inline-start: 0px;
@@ -51,8 +51,30 @@ a {
 
   color: #020617;
   text-decoration: none;
+  font-size: clamp(1rem, -4.8571rem + 9.1429vw, 2rem);
 }
 
 .cart {
   display: flex;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .cartSvg {
+    width: 2rem;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .cartSvg {
+    width: 1.5rem;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 481px) {
+  .cartSvg {
+    width: 1.2rem;
+    transition: 0.5s;
+  }
 }

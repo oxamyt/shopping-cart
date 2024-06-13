@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./ShopPage.module.css";
 import loadingSvg from "../../assets/loading.svg";
 import { getClothesRequest } from "./fetchCall/fetchCall";
-import ShopItem from "../shopItems/ShopItem";
+import ShopItem from "../shopItem/ShopItem";
 import { useOutletContext } from "react-router-dom";
 import ItemsNav from "../itemsNav/ItemsNav";
 

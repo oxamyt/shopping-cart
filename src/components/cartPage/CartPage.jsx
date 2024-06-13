@@ -4,7 +4,6 @@ import CartItem from "../cartItem/CartItem";
 
 function CartPage() {
   const [cart, setCart] = useOutletContext();
-  console.log(cart);
   return (
     <main className={styles.cart}>
       {cart.length !== 0 ? (

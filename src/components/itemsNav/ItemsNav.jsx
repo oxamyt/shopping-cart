@@ -1,5 +1,5 @@
-import { useState } from "react";
 import styles from "./ItemsNav.module.css";
+import PropTypes from "prop-types";
 
 function ItemsNav({ setData, originalData }) {
   function handleSort(type) {
@@ -30,5 +30,10 @@ function ItemsNav({ setData, originalData }) {
     </div>
   );
 }
+
+ItemsNav.propTypes = {
+  setData: PropTypes.func.isRequired,
+  originalData: PropTypes.array,
+};
 
 export default ItemsNav;
