@@ -6,6 +6,18 @@ A modern shopping cart application built with React, React Router, and Vite. Bro
 
 Shopping Cart is a simple yet powerful e-commerce frontend that allows users to explore products, add them to their cart, and proceed to checkout. It is designed with performance and usability in mind.
 
+🚀 [Try it Live](https://oxamyt-shopping-cart.netlify.app/) 🚀
+
+## Screenshots
+
+**Home Interface**  
+![Home](https://res.cloudinary.com/dehoidlo0/image/upload/v1743009320/awqzhkb2mdkjk6f7kmzl.png)
+
+**Shop Page**  
+![Shop](https://res.cloudinary.com/dehoidlo0/image/upload/v1743009429/qzd8nwgsqrmobcjagecy.png)
+**Cart Page**
+![Cart](https://res.cloudinary.com/dehoidlo0/image/upload/v1743009528/nopujpmqxlefftjyfajx.png)
+
 ## Features
 
 ### Core Features
